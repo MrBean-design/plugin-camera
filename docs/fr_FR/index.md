@@ -15,7 +15,7 @@ Après installation du plugin, il vous suffit de l'activer. Quelques paramètres
 
 ## Compatibilité
 
-Vous pouvez trouver [ici](https://compatibility.jeedom.com/index.php?v=d&p=home&plugin=camera) la liste des modules compatible avec le plugin
+Vous pouvez trouver [ici](https://compatibility.jeedom.com/index.php?v=d&p=home&plugin=camera) la liste des modules compatible avec le plugin. **Attention, le plugin ne supporte pas les flux vidéos encodés en H265.Seuls les flux encodés en H264 seront restitués.**
 
 # Configuration des équipements
 
@@ -119,9 +119,9 @@ Il est bien sur aussi disponible en mobile par Plugin → Caméra.
 
 # Enregistrement et envoi de capture
 
-Cette commande, un peu spécifique, permet suite à la prise de capture de faire l'envoi de celle-ci (compatible avec le plugin slack, mail et transfert).
+Cette commande, un peu spécifique, permet suite à la prise de capture de faire l'envoi de celle-ci (compatible avec le plugin slack, mail et transfert). Elle fait appel la commande "Enregistrement" qui n'est pas visible dans le menu des commande standards mais seulement dans le menu des commandes avancées. 
 
-La configuration est assez simple vous appelez l'action d'envoi de capture (dénommée "Enregistrement") dans un scénario. Dans la partie titre vous passez les options.
+La configuration est assez simple: **Dans un scénario (et non pas sur la page de configuration de votre caméra)**, vous appelez l'action d'envoi de capture (dénommée "Enregistrement") . Dans la partie titre vous passez les options.
 
 Par défaut il suffit de mettre le nombre de captures voulues dans le champ "nombre captures ou options", mais vous pouvez aller plus loin avec des options (voir détail ci-dessous "options avancées des captures"). Dans la partie message, vous n'avez plus qu'à renseigner la commande du plugin (actuellement slack, mail ou transfert) qui fait l'envoi des captures. Vous pouvez en mettre plusieurs séparés par des &&.
 
